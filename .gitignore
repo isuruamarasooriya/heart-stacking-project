@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+data/raw/*
+!data/raw/.gitkeep
+models/*
+!models/.gitkeep
+# Keep generated results in version control if you want to publish them.

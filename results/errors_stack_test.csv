@@ -1,0 +1,9 @@
+,age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal,y_true,proba_disease,y_pred,correct,error_type,confidence_in_wrong_answer,cp_label
+271,66.0,1.0,4.0,160.0,228.0,0.0,2.0,138.0,0.0,2.3,1.0,0.0,6.0,0,0.606,1,False,false alarm (false positive),0.606,asymptomatic
+196,69.0,1.0,1.0,160.0,234.0,1.0,2.0,131.0,0.0,0.1,2.0,1.0,3.0,0,0.547,1,False,false alarm (false positive),0.547,typical angina
+33,59.0,1.0,4.0,135.0,234.0,0.0,0.0,161.0,0.0,0.5,2.0,0.0,7.0,0,0.736,1,False,false alarm (false positive),0.736,asymptomatic
+179,53.0,1.0,3.0,130.0,246.0,1.0,2.0,173.0,0.0,0.0,1.0,3.0,3.0,0,0.542,1,False,false alarm (false positive),0.542,non-anginal pain
+287,58.0,1.0,2.0,125.0,220.0,0.0,0.0,144.0,0.0,0.4,2.0,,7.0,0,0.526,1,False,false alarm (false positive),0.526,atypical angina
+66,60.0,1.0,3.0,140.0,185.0,0.0,2.0,155.0,0.0,3.0,2.0,0.0,3.0,1,0.247,0,False,missed disease (false negative),0.753,non-anginal pain
+92,62.0,1.0,3.0,130.0,231.0,0.0,0.0,146.0,0.0,1.8,2.0,3.0,7.0,0,0.912,1,False,false alarm (false positive),0.912,non-anginal pain
+172,59.0,0.0,4.0,174.0,249.0,0.0,0.0,143.0,1.0,0.0,2.0,0.0,3.0,1,0.43,0,False,missed disease (false negative),0.57,asymptomatic

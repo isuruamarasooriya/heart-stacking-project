@@ -1,0 +1,49 @@
+# All experiment settings live here, so nothing is hard-coded in the code.
+# Change a value, re-run `python run_experiment.py`, get a new, fully reproducible result.
+
+seed: 42                      # one seed used for the split, CV, models and bootstrap
+
+data:
+  raw_path: data/raw/processed.cleveland.data
+  expected_rows: 303          # the Cleveland file has 303 patients
+  urls:                       # tried in order if the file is not already on disk
+    - https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data
+    - https://archive.ics.uci.edu/static/public/45/heart+disease.zip
+
+split:
+  test_size: 0.20             # held-out test set, touched only once at the very end
+
+cv:
+  n_splits: 5                 # 5-fold ...
+  n_repeats: 5                # ... repeated 5 times = 25 scores per model
+
+metrics:
+  primary: roc_auc            # DECIDED BEFORE SEEING RESULTS. Options: accuracy, roc_auc, f1, recall, precision
+  threshold: 0.5              # probability cut-off for class predictions
+
+# Deliberately NOT tuned: tuning is a different project (Project 2).
+# Stacking is judged on diverse, reasonable, default-ish models.
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+  random_forest:
+    n_estimators: 300
+    min_samples_leaf: 3
+  svm:
+    C: 1.0
+    kernel: rbf
+
+stacking:
+  final_estimator_C: 1.0      # meta-learner = logistic regression
+  inner_cv_folds: 5           # folds used to create out-of-fold base predictions
+
+bootstrap:
+  n_resamples: 2000
+
+error_analysis:
+  n_errors_to_show: 15        # the brief asks for at least 10
+
+output:
+  dir: results
+  model_path: models/stacking_model.joblib

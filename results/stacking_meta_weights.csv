@@ -1,0 +1,4 @@
+base model,meta-learner coefficient
+Logistic Regression,2.5685756511161206
+Random Forest,1.7036879470384934
+SVM (RBF),1.1785241300194302
